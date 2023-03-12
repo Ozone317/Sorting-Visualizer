@@ -26,8 +26,7 @@ class HomePage extends StatelessWidget {
                   minimumSize: const Size(1000, 50),
                 ),
                 onPressed: () {
-                  Navigator.of(context)
-                      .popAndPushNamed(RouteManager.bubbleSort);
+                  Navigator.of(context).pushNamed(RouteManager.bubbleSort);
                 },
                 child: const Text('Bubble sort'),
               ),
@@ -43,8 +42,7 @@ class HomePage extends StatelessWidget {
                   minimumSize: const Size(1000, 50),
                 ),
                 onPressed: () {
-                  Navigator.of(context)
-                      .popAndPushNamed(RouteManager.selectionSort);
+                  Navigator.of(context).pushNamed(RouteManager.selectionSort);
                 },
                 child: const Text('Selection sort'),
               ),
@@ -60,8 +58,7 @@ class HomePage extends StatelessWidget {
                   minimumSize: const Size(1000, 50),
                 ),
                 onPressed: () {
-                  Navigator.of(context)
-                      .popAndPushNamed(RouteManager.insertionSort);
+                  Navigator.of(context).pushNamed(RouteManager.insertionSort);
                 },
                 child: const Text('Insertion sort'),
               ),
@@ -77,7 +74,7 @@ class HomePage extends StatelessWidget {
                   minimumSize: const Size(1000, 50),
                 ),
                 onPressed: () {
-                  Navigator.of(context).popAndPushNamed(RouteManager.quickSort);
+                  Navigator.of(context).pushNamed(RouteManager.quickSort);
                 },
                 child: const Text('Quick sort'),
               ),
@@ -93,7 +90,7 @@ class HomePage extends StatelessWidget {
                   minimumSize: const Size(1000, 50),
                 ),
                 onPressed: () {
-                  Navigator.of(context).popAndPushNamed(RouteManager.mergeSort);
+                  Navigator.of(context).pushNamed(RouteManager.mergeSort);
                 },
                 child: const Text('Merge sort'),
               ),

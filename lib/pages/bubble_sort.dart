@@ -35,7 +35,7 @@ class _BubbleSortState extends State<BubbleSort> {
           list[j] = list[j + 1];
           list[j + 1] = temp;
         }
-        await Future.delayed(const Duration(microseconds: 500));
+        await Future.delayed(const Duration(microseconds: 1000));
         setState(() {});
       }
     }
@@ -59,7 +59,7 @@ class _BubbleSortState extends State<BubbleSort> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.of(context).popAndPushNamed(RouteManager.homePage);
+              Navigator.of(context).pop();
             },
             icon: const Icon(Icons.exit_to_app),
           ),

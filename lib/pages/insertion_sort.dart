@@ -61,7 +61,7 @@ class _InsertionSortState extends State<InsertionSort> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.of(context).popAndPushNamed(RouteManager.homePage);
+              Navigator.of(context).pop();
             },
             icon: const Icon(Icons.exit_to_app),
           ),

@@ -33,7 +33,7 @@ class _QuickSortState extends State<QuickSort> {
 
       await quickSort(mid + 1, h);
 
-      await Future.delayed(const Duration(milliseconds: 10));
+      await Future.delayed(const Duration(milliseconds: 50));
       setState(() {});
     }
     return;
@@ -60,14 +60,14 @@ class _QuickSortState extends State<QuickSort> {
         list[i] = list[j];
         list[j] = temp;
       }
-      await Future.delayed(const Duration(milliseconds: 10));
+      await Future.delayed(const Duration(milliseconds: 50));
       setState(() {});
     }
     int temp = list[pivot];
     list[pivot] = list[j];
     list[j] = temp;
 
-    await Future.delayed(const Duration(milliseconds: 10));
+    await Future.delayed(const Duration(milliseconds: 50));
     setState(() {});
 
     return j;
@@ -98,7 +98,7 @@ class _QuickSortState extends State<QuickSort> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.of(context).popAndPushNamed(RouteManager.homePage);
+              Navigator.of(context).pop();
             },
             icon: const Icon(Icons.exit_to_app),
           ),

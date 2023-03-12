@@ -39,15 +39,15 @@ class _MergeSortState extends State<MergeSort> {
     if (low < high) {
       int mid = (low + high) ~/ 2;
       await mergeSort(low, mid);
-      await Future.delayed(const Duration(microseconds: 500));
+      await Future.delayed(const Duration(microseconds: 1500));
       setState(() {});
 
       await mergeSort(mid + 1, high);
-      await Future.delayed(const Duration(microseconds: 900));
+      await Future.delayed(const Duration(microseconds: 1500));
       setState(() {});
 
       await merge(low, mid, high);
-      await Future.delayed(const Duration(microseconds: 500));
+      await Future.delayed(const Duration(microseconds: 1500));
       setState(() {});
     }
   }
@@ -66,7 +66,7 @@ class _MergeSortState extends State<MergeSort> {
         newList[k] = list[j];
         ++j;
       }
-      await Future.delayed(const Duration(microseconds: 900));
+      await Future.delayed(const Duration(microseconds: 1500));
       setState(() {});
 
       ++k;
@@ -77,7 +77,7 @@ class _MergeSortState extends State<MergeSort> {
         newList[k] = list[j];
         ++k;
         ++j;
-        await Future.delayed(const Duration(microseconds: 900));
+        await Future.delayed(const Duration(microseconds: 1500));
         setState(() {});
       }
     } else {
@@ -85,13 +85,13 @@ class _MergeSortState extends State<MergeSort> {
         newList[k] = list[i];
         ++k;
         ++i;
-        await Future.delayed(const Duration(microseconds: 900));
+        await Future.delayed(const Duration(microseconds: 1500));
         setState(() {});
       }
     }
     for (k = low; k <= high; ++k) {
       list[k] = newList[k];
-      await Future.delayed(const Duration(microseconds: 900));
+      await Future.delayed(const Duration(microseconds: 1500));
       setState(() {});
     }
   }
@@ -112,7 +112,7 @@ class _MergeSortState extends State<MergeSort> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.of(context).popAndPushNamed(RouteManager.homePage);
+              Navigator.of(context).pop();
             },
             icon: const Icon(Icons.exit_to_app),
           ),
